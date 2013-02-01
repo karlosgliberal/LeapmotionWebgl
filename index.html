@@ -141,12 +141,10 @@
 				var frame = controller.frame();
         for(hid = 0; hid < frame.fingers().count(); hid++){
           var finger =frame.fingers()[hid];
-          // console.log(600-(finger-tipPosition().y));
           mouseY =  10* (finger.tipPosition().y) - windowHalfY; 
           mouseX =  10*(finger.tipPosition().x) - windowHalfX; 
           console.log(mouseX);
         }
-        // console.log(frame);
 			}
 			myListener.onDisconnect = function(controller){
 				document.getElementById("output").innerHTML = 'Device disconnected.';
